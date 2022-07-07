@@ -1,4 +1,5 @@
-<div id="form">
+<h1 class="form">Notepad</h1>
+<div class="form">
 <input type="text" [(ngModel)]="title" placeholder="Title">
 <br>
 <input type="text" [(ngModel)]="content" placeholder="Content">
@@ -6,9 +7,10 @@
 <button (click)="createNewNote()">Submit</button>
 </div>
 <div id="notes">
-<p *ngFor="let note of notes">
-  {{note.title}}
+<p class="note" *ngFor="let note of notes">
+  <span class="title">{{note.title}}</span>
+  <span class="border"></span>
   <br>
-  {{note.content}}
+  <span class="content">{{note.content}}</span>
 </p>
 </div>

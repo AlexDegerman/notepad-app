@@ -1,0 +1,28 @@
+.note {
+  border: 1px solid black;
+  background-color: #d29c2a;
+  font-size:3rem;
+  padding-bottom: 1rem;
+}
+.form {
+  text-align: center;
+}
+input, button {
+  margin-top: 1rem;
+  font-size:3rem;
+}
+.content {
+  font-size: 2rem;
+}
+.title {
+  font-size: 4rem;
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+.border {
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+h1 {
+  font-size: 5rem;
+}
