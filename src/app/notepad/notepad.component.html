@@ -1,1 +1,14 @@
-<p>notepad works!</p>
+<div id="form">
+<input type="text" [(ngModel)]="title" placeholder="Title">
+<br>
+<input type="text" [(ngModel)]="content" placeholder="Content">
+<br>
+<button (click)="createNewNote()">Submit</button>
+</div>
+<div id="notes">
+<p *ngFor="let note of notes">
+  {{note.title}}
+  <br>
+  {{note.content}}
+</p>
+</div>
