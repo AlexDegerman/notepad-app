@@ -1,0 +1,21 @@
+<html>
+<h1 class="form">Notepad</h1>
+<div class="form">
+<input type="text" [(ngModel)]="title" placeholder="Title">
+<br>
+<input type="text" [(ngModel)]="content" placeholder="Content">
+<br>
+<button (click)="createNewNote($event.timeStamp)">Submit</button>
+</div>
+<div id="notes" >
+  <div class="form">
+  <input type="text" class="form" placeholder="Search" [(ngModel)]="search">
+</div>
+<p class="note" *ngFor="let note of notes | search: search">
+  <span class="title">{{note.title}}</span>
+  <span class="date">{{note.date}}</span>
+  <br>
+  <span class="content">{{note.content}}</span>
+</p>
+</div>
+</html>
