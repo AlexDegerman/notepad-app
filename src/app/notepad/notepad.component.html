@@ -8,7 +8,8 @@
 <button (click)="createNewNote($event.timeStamp)">Submit</button>
 </div>
 <div id="notes">
-<p class="note" *ngFor="let note of notes">
+  <input type="text" placeholder="Search" [(ngModel)]="search">
+<p class="note" *ngFor="let note of notes | search: search">
   <span class="title">{{note.title}}</span>
   <span class="date">{{note.date}}</span>
   <br>

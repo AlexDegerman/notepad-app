@@ -16,7 +16,7 @@ export class NotepadComponent implements OnInit {
   content = '';
   date : any;
   notes: Notes[] = [];
-
+  search: any;
   constructor(private datePipe: DatePipe) {}
 
   ngOnInit(): void {
