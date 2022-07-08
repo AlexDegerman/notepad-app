@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-
+import { DatePipe } from '@angular/common';
 export class Notes {
   title: String | undefined;
   content: String | undefined;
+  date: any ;
 }
 
 @Component({
@@ -13,18 +14,23 @@ export class Notes {
 export class NotepadComponent implements OnInit {
   title = '';
   content = '';
+  date : any;
   notes: Notes[] = [];
 
-  constructor() {}
+  constructor(private datePipe: DatePipe) {}
 
   ngOnInit(): void {
     this.loadData();
   }
 
   createNewNote(event: any) {
+    let day = new Date();
+    let current = this.datePipe.transform(day, 'dd/MM/yyyy')
+    this.date = day;
     const notes: Notes = {
       title: this.title,
       content: this.content,
+      date: current
     };
     console.log(event);
     localStorage.setItem(event, JSON.stringify(notes));
