@@ -1,8 +1,9 @@
 .note {
   border: 1px solid black;
   background-color: #d29c2a;
-  font-size: 3rem;
+  font-size: 2rem;
   padding-bottom: 1rem;
+  margin: 0.5rem;
 }
 .form {
   text-align: center;
@@ -10,20 +11,20 @@
 input,
 button {
   margin-top: 1rem;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 .content {
   font-size: 2rem;
 }
 .title {
-  font-size: 4rem;
+  font-size: 3rem;
   border-bottom: 1px solid black;
 }
 .border {
   border-bottom: 1px solid black;
 }
 h1 {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 .date {
   float: right;
